@@ -1,0 +1,16 @@
+# 0)gitignore exception
+!.gitignore
+
+# 1)Ignore all
+*
+
+# 2)Folder exception
+!*/
+
+# 3)Source exception
+!CMakeList.txt
+!*.h
+!*.cpp
+
+# 4)Resource exception
+!resource/
