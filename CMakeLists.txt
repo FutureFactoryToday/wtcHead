@@ -10,6 +10,12 @@ include(${wxWidgets_USE_FILE})
 
 add_executable(${PROJECT_NAME}
 	wtcApp.cpp
+	wtcTopBar.h
+	wtcTopBar.cpp
+	wtcBottomBar.h
+	wtcBottomBar.cpp
+	wtcInnerArea.h
+	wtcInnerArea.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
