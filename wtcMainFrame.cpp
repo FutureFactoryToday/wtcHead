@@ -19,12 +19,12 @@ WtcMainFrame::WtcMainFrame(wxFrame *frame, const wxString &title)
  	SetSizer(backgroundSizer);
 }
  
-WtcMainFrame::OnClose(wxCloseEvent &event)
+void WtcMainFrame::OnClose(wxCloseEvent &event)
 {
   Destroy();
 }
 
-WtcMainFrame::OnQuit(wxCommandEvent &event)
+void WtcMainFrame::OnQuit(wxCommandEvent &event)
 {
   Destroy();
 }
