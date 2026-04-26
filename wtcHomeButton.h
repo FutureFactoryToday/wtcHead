@@ -3,10 +3,10 @@
 
 #include <wx/wx.h>
 
-class WtcHomeButton : public wxButton
+class WtcHomeButton : public wxControl
 {
 public:
-	WtcHomeButton(wxWindow *parent, wxWindowID id, const wxString &title, const wxDefaultPosition &pos, const wxDefaultSize &size, long style);
+	WtcHomeButton(wxWindow *parent, wxWindowID id, const wxDefaultPosition &pos, const wxDefaultSize &size, long style);
 	~WtcHomeButton(){};
 	
 };
