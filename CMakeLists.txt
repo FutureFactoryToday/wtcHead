@@ -10,6 +10,8 @@ include(${wxWidgets_USE_FILE})
 
 add_executable(${PROJECT_NAME}
 	wtcApp.cpp
+	wtcMainFrame.h
+	wtcMainFrame.cpp
 	wtcTopBar.h
 	wtcTopBar.cpp
 	wtcBottomBar.h
