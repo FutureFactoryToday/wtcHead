@@ -18,6 +18,8 @@ add_executable(${PROJECT_NAME}
 	wtcBottomBar.cpp
 	wtcInnerArea.h
 	wtcInnerArea.cpp
+	blinkingButton.h
+	blinkingButton.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
