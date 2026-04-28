@@ -1,0 +1,21 @@
+#include <wx/wx.h>
+#include <wx/graphics.h>
+
+class BlinkingButton : public wxControl 
+{
+public:
+    CustomButton(wxWindow* parent, wxWindowID id, const wxBitmap& bitmap);
+
+private:
+    void OnPaint(wxPaintEvent& event);
+    void OnLeftDown(wxMouseEvent& event);
+    void OnLeftUp(wxMouseEvent& event);
+    void OnTimer(wxTimerEvent& event);
+    void OnSize(wxSizeEvent& event);
+
+    wxBitmap m_bitmap;
+    wxTimer m_timer;
+    bool m_isPressed;
+    double m_intensity; // Интенсивность градиента (0.0 - 1.0)
+    bool m_increasing;  // Направление анимации
+};

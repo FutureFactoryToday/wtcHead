@@ -5,6 +5,7 @@
 
 class WtcInnerArea : public wxPanel 
 {
+public:
   WtcInnerArea(wxWindow *parent, wxWindowID id, const wxDefaulPosition &pos, const wxDefaultSize &size, long style);
   ~WtcInnerArea(){};
 };
