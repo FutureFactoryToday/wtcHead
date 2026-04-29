@@ -1,4 +1,9 @@
+#ifndef BLINKING_BUTTON_H
+#define BLINKING_BUTTON_H
+
 #include <wx/wx.h>
+#include <wx/timer.h>
+#include <wx/dcbuffer.h>
 #include <wx/graphics.h>
 
 class BlinkingButton : public wxControl 
@@ -19,3 +24,5 @@ private:
     double m_intensity; // Интенсивность градиента (0.0 - 1.0)
     bool m_increasing;  // Направление анимации
 };
+
+#endif //BLINKING_BUTTON_H
