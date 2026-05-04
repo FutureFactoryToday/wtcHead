@@ -6,7 +6,7 @@
 class WtcBottomBar : public wxPanel 
 {
 public:
-  WtcBottomBar(wxWindow *parent, wxWindowID id, const wxDefaulPosition &pos, const wxDefaultSize &size, long style);
+  WtcBottomBar(wxWindow *parent, wxWindowID id, const wxPoint &pos, const wxSize &size, long style);
   ~WtcBottomBar(){};
 };
 #endif //WTC_BOTTOM_BAR_H

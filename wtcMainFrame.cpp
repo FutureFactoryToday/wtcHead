@@ -1,7 +1,7 @@
 #include "wtcMainFrame.h"
 
-WtcMainFrame::WtcMainFrame(wxFrame *frame, const wxString &title)
- : wxFrame(frame, title)
+WtcMainFrame::WtcMainFrame(wxFrame *frame, wxWindowID id, const wxString &title)
+ :wxFrame(frame, id, title)
 {
   SetMinSize(wxSize(1024,768));
  	SetMaxSize(wxSize(1024,768));

@@ -1,10 +1,8 @@
 #include "pulsatingButton.h"
 
-PulsatingButton::PulsatingButton(wxWindow* parent, wxWindowID id, const wxString& label, const wxBitmap& bitmap,
-                               const wxPoint& pos, const wxSize& size)
-    : wxControl(parent, id, pos, size, wxBORDER_NONE),
-      m_label(label), m_bitmap(bitmap), m_scale(1.0f), 
-      m_targetScale(1.0f), m_isBouncing(false)
+PulsatingButton::PulsatingButton(wxWindow* parent, wxWindowID id, const wxString& label, const wxBitmap& bitmap, const wxPoint& pos, const wxSize& size)
+    : wxControl(parent, id, pos, size),
+      m_label(label), m_bitmap(bitmap), m_scale(1.0f), m_targetScale(1.0f), m_isBouncing(false)
 {
     // Включаем двойную буферизацию для исключения мерцания
     SetBackgroundStyle(wxBG_STYLE_PAINT);

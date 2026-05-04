@@ -6,7 +6,7 @@
 class WtcHomeButton : public wxControl
 {
 public:
-	WtcHomeButton(wxWindow *parent, wxWindowID id, const wxDefaultPosition &pos, const wxDefaultSize &size, long style);
+	WtcHomeButton(wxWindow *parent, wxWindowID id, const wxPoint &pos, const wxSize &size, long style);
 	~WtcHomeButton(){};
 	
 };

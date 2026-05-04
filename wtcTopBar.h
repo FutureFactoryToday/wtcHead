@@ -9,10 +9,13 @@
 class WtcTopBar : public wxPanel 
 {
 public:
-  WtcTopBar(wxWindow *parent, wxWindowID id, const wxDefaulPosition &pos, const wxDefaultSize &size, long style);
+  WtcTopBar(wxWindow *parent, wxWindowID id, const wxPoint &pos, const wxSize &size, long style);
   ~WtcTopBar(){};
 private:
+  BlinkingButton *returnBtn;
+  BlinkingButton *homeBtn;
+
   void OnButtonReturnClick(wxCommandEvent& event);
-  void OnButtonHomelick(wxCommandEvent& event);
+  void OnButtonHomeClick(wxCommandEvent& event);
 };
 #endif //WTC_TOP_BAR_H

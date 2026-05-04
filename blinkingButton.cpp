@@ -1,8 +1,12 @@
 #include "blinkingButton.h"
 
 BlinkingButton::BlinkingButton(wxWindow* parent, wxWindowID id, const wxBitmap& bitmap)
-    : wxControl(parent, id, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE),
-      m_bitmap(bitmap), m_timer(this), m_isPressed(false), m_intensity(0.0), m_increasing(true) 
+    : wxControl(parent, id),
+      m_bitmap(bitmap),
+      m_timer(this),
+      m_isPressed(false),
+      m_intensity(0.0),
+      m_increasing(true) 
 {
     SetBackgroundStyle(wxBG_STYLE_PAINT); // Предотвращает мерцание
     
@@ -10,7 +14,7 @@ BlinkingButton::BlinkingButton(wxWindow* parent, wxWindowID id, const wxBitmap& 
     Bind(wxEVT_LEFT_DOWN, &BlinkingButton::OnLeftDown, this);
     Bind(wxEVT_LEFT_UP, &BlinkingButton::OnLeftUp, this);
     Bind(wxEVT_TIMER, &BlinkingButton::OnTimer, this);
-    Bind(wxEVT_SIZE, &CustomButton::OnSize, this);
+    Bind(wxEVT_SIZE, &BlinkingButton::OnSize, this);
     
     SetInitialSize(wxSize(bitmap.GetWidth() + 10, bitmap.GetHeight() + 10));
 }

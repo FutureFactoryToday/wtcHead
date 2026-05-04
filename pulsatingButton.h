@@ -8,8 +8,7 @@
 
 class PulsatingButton : public wxControl {
 public:
-    PulsatingButton(wxWindow* parent, wxWindowID id, const wxString& label, const wxBitmap& bitmap,
-                   const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize);
+    PulsatingButton(wxWindow* parent, wxWindowID id, const wxString& label, const wxBitmap& bitmap, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize);
 
 private:
     void OnPaint(wxPaintEvent& event);
