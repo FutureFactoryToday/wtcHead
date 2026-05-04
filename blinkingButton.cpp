@@ -30,15 +30,12 @@ void BlinkingButton::OnPaint(wxPaintEvent& event) {
     wxSize size = GetSize();
     double centerX = size.GetWidth() / 2.0;
     double centerY = size.GetHeight() / 2.0;
-    double radius = wxMin(size.GetWidth(), size.GetHeight()) / 2.0;
+    double radius = size.GetHeight() / 2.0;
 
     // 1. Рисуем градиент, если кнопка нажата
     if (m_isPressed) {
         wxColour color = wxColour(0, 120, 215, (unsigned char)(m_intensity * 180)); // Синий с прозрачностью
-        wxGraphicsBrush gradient = gc->CreateRadialGradientBrush(
-            centerX, centerY, centerX, centerY, radius, 
-            color, wxColour(255, 255, 255, 0)
-        );
+        wxGraphicsBrush gradient = gc->CreateRadialGradientBrush(centerX, centerY, centerX, centerY, radius, color, wxColour(255, 255, 255, 0));
         gc->SetBrush(gradient);
         gc->SetPen(*wxTRANSPARENT_PEN);
         gc->DrawEllipse(0, 0, size.GetWidth(), size.GetHeight());
