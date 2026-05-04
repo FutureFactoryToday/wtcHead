@@ -11,6 +11,8 @@
 !CMakeLists.txt
 !*.h
 !*.cpp
+!*.svg
+!*.png
 
 # 4)Resource exception
-!resource/
+!resources/
