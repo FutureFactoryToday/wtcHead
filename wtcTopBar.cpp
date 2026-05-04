@@ -7,7 +7,7 @@ WtcTopBar::WtcTopBar(wxWindow *parent, wxWindowID id, const wxPoint &pos, const 
   SetBackgroundColour(wxColour(0, 48, 78));
   
   wxString exeDir = wxFileName(wxStandardPaths::Get().GetExecutablePath()).GetPath();
-  wxString resFolder = exeDir + "/resources/"; // Сохранили общую часть
+  wxString resFolder = exeDir + "resources/"; // Сохранили общую часть
 
   wxString pathReturnIcon = resFolder + "returnIcon.png";
   wxString pathHomeIcon   = resFolder + "homeIcon.png";
