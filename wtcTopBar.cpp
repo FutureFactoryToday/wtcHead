@@ -7,7 +7,7 @@ WtcTopBar::WtcTopBar(wxWindow *parent, wxWindowID id, const wxPoint &pos, const 
   SetBackgroundColour(wxColour(0, 48, 78));
   
   wxString exeDir = wxFileName(wxStandardPaths::Get().GetExecutablePath()).GetPath();
-  wxString resFolder = exeDir + "resources/"; // Сохранили общую часть
+  wxString resFolder = exeDir + "/resources/"; // Сохранили общую часть
 
   wxString pathReturnIcon = resFolder + "returnIcon.png";
   wxString pathHomeIcon   = resFolder + "homeIcon.png";
@@ -15,23 +15,23 @@ WtcTopBar::WtcTopBar(wxWindow *parent, wxWindowID id, const wxPoint &pos, const 
   if(wxFileExists(pathReturnIcon)) 
   {
     wxBitmap returnIcon(pathReturnIcon, wxBITMAP_TYPE_PNG);
-    returnBtn = new BlinkingButton(this, wxID_ANY, returnIcon);
+    returnBtn = new BlinkingButton(this, wxID_ANY, returnIcon, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE);
   }
   else
   {
     wxBitmap placeholder = wxArtProvider::GetBitmap(wxART_QUESTION, wxART_BUTTON, wxSize(32, 32));
-    returnBtn = new BlinkingButton(this, wxID_ANY, placeholder);
+    returnBtn = new BlinkingButton(this, wxID_ANY, placeholder, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE);
   }
   
     if(wxFileExists(pathHomeIcon)) 
   {
     wxBitmap homeIcon(pathHomeIcon, wxBITMAP_TYPE_PNG);
-    homeBtn = new BlinkingButton(this, wxID_ANY, homeIcon);
+    homeBtn = new BlinkingButton(this, wxID_ANY, homeIcon, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE);
   }
   else
   {
     wxBitmap placeholder = wxArtProvider::GetBitmap(wxART_QUESTION, wxART_BUTTON, wxSize(32, 32));
-    homeBtn = new BlinkingButton(this, wxID_ANY, placeholder);
+    homeBtn = new BlinkingButton(this, wxID_ANY, placeholder, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE);
   }
   
   wxStaticText *label = new wxStaticText(this, wxID_ANY, wxT(""), wxDefaultPosition, wxDefaultSize);

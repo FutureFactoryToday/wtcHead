@@ -10,7 +10,7 @@
 class BlinkingButton : public wxControl 
 {
 public:
-    BlinkingButton(wxWindow* parent, wxWindowID id, const wxBitmap& bitmap);
+    BlinkingButton(wxWindow* parent, wxWindowID id, const wxBitmap& bitmap, const wxPoint &pos, const wxSize &size, long style);
 
 private:
     void OnPaint(wxPaintEvent& event);
