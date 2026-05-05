@@ -10,7 +10,7 @@
 class WtcMainFrame : public wxFrame
 {
 public:
-	WtcMainFrame(wxFrame *frame, wxWindowID id, const wxString &title);
+	WtcMainFrame(wxFrame *frame, wxWindowID id, const wxString &title, const wxPoint &pos, const wxSize &size, long style);
 	~WtcMainFrame(){};
 private:
 	void OnClose(wxCloseEvent &event);

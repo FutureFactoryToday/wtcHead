@@ -1,7 +1,7 @@
 #include "wtcMainFrame.h"
 
-WtcMainFrame::WtcMainFrame(wxFrame *frame, wxWindowID id, const wxString &title)
- :wxFrame(frame, id, title)
+WtcMainFrame::WtcMainFrame(wxFrame *frame, wxWindowID id, const wxString &title, const wxPoint &pos, const wxSize &size, long style)
+ :wxFrame(frame, id, title, pos, size, style)
 {
   SetMinSize(wxSize(1024,768));
  	SetMaxSize(wxSize(1024,768));
@@ -17,6 +17,9 @@ WtcMainFrame::WtcMainFrame(wxFrame *frame, wxWindowID id, const wxString &title)
  	backgroundSizer->Add(bottomBar, 1, wxEXPAND|wxALL, 0);
  	
  	SetSizer(backgroundSizer);
+  Layout();
+  Fit();
+  Center(wxBOTH);
 }
  
 void WtcMainFrame::OnClose(wxCloseEvent &event)
